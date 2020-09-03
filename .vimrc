@@ -10,10 +10,12 @@ set pastetoggle=<F3>
 autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
 autocmd filetype cpp nnoremap <F6> :%y+<CR>
 autocmd filetype cpp nnoremap <F9> :!%:r<CR>
+autocmd fileType python map <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 map <F8> :NERDTreeToggle<CR>
 call plug#begin()
 	Plug 'preservim/nerdtree'
 	Plug 'itchyny/lightline.vim'
 	Plug 'kien/ctrlp.vim'
+	Plug 'morhetz/gruvbox'
 call plug#end()
  
