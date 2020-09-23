@@ -27,4 +27,6 @@ call plug#begin()
 	Plug 'kien/ctrlp.vim'
 call plug#end()
 "Color Scheme
+"Taken from: https://github.com/morhetz/gruvbox/blob/master/colors/gruvbox.vim
+"Remeber to set line 33 equal to 0 (if italic exits) if you don't like italic 
 colorscheme gruvbox
