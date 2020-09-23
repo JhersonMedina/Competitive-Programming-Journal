@@ -1,4 +1,4 @@
-"Edditor Settings
+"Editor Settings
 syntax on
 set number
 set noerrorbells
@@ -18,7 +18,7 @@ autocmd filetype c nnoremap <F5> :w <bar> !gcc % -o %:r -Wl,--stack,268435456<CR
 autocmd filetype c nnoremap <F9> :!%:r<CR>
 "Python
 autocmd fileType python map <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-"Keymaps for toogle some plugins
+"Keymaps for toggling some plugins
 map <F8> :NERDTreeToggle<CR>
 "Pluing install
 call plug#begin()
