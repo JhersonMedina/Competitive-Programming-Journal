@@ -1,4 +1,4 @@
-"Editor Settings
+"Edditor Settings
 syntax on
 set number
 set noerrorbells
@@ -8,6 +8,7 @@ set autoindent
 set smartindent
 set cindent
 set pastetoggle=<F3>
+set guifont=Cascadia_Code:h10:b
 "Keymaps for compiling and excuting in different languages
 "C++
 autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
@@ -18,7 +19,7 @@ autocmd filetype c nnoremap <F5> :w <bar> !gcc % -o %:r -Wl,--stack,268435456<CR
 autocmd filetype c nnoremap <F9> :!%:r<CR>
 "Python
 autocmd fileType python map <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-"Keymaps for toggling some plugins
+"Keymaps for toogle some plugins
 map <F8> :NERDTreeToggle<CR>
 "Pluing install
 call plug#begin()
@@ -27,6 +28,4 @@ call plug#begin()
 	Plug 'kien/ctrlp.vim'
 call plug#end()
 "Color Scheme
-"Taken from: https://github.com/morhetz/gruvbox/blob/master/colors/gruvbox.vim
-"Remeber to set line 33 equal to 0 (if italic exits) if you don't like italic 
 colorscheme gruvbox
