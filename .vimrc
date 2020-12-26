@@ -1,4 +1,37 @@
-"Edditor Settings
+"vundle for plugins*********************************************************************************
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=$HOME/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" All of your Plugins must be added before the following line
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'morhetz/gruvbox'
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"***************************************************************************************************
+
+"Edditor Settings***********************************************************************************
 syntax on
 set number
 set noerrorbells
@@ -8,24 +41,15 @@ set autoindent
 set smartindent
 set cindent
 set pastetoggle=<F3>
-set guifont=Cascadia_Code:h10:b
-"Keymaps for compiling and excuting in different languages
-"C++
-autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
-autocmd filetype cpp nnoremap <F6> :%y+<CR>
-autocmd filetype cpp nnoremap <F9> :!%:r<CR>
-"C
-autocmd filetype c nnoremap <F5> :w <bar> !gcc % -o %:r -Wl,--stack,268435456<CR>
-autocmd filetype c nnoremap <F9> :!%:r<CR>
-"Python
-autocmd fileType python map <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-"Keymaps for toogle some plugins
-map <F8> :NERDTreeToggle<CR>
-"Pluing install
-call plug#begin()
-	Plug 'preservim/nerdtree'
-	Plug 'itchyny/lightline.vim'
-	Plug 'kien/ctrlp.vim'
-call plug#end()
-"Color Scheme
+set clipboard=unnamedplus
 colorscheme gruvbox
+set background=dark
+"***************************************************************************************************
+
+"Keymaps for compiling and plugins******************************************************************
+nnoremap <F5> :!g++ -o  %:r.out % -std=c++14<Enter>
+nnoremap <F6> :%y+<Enter>
+nnoremap <F9> :!./%:r.out<Enter>
+map <F8> :NERDTreeToggle<CR>
+"**************************************************************************************************
+
