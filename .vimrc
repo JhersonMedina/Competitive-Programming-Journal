@@ -16,6 +16,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'morhetz/gruvbox'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -44,6 +45,7 @@ set pastetoggle=<F3>
 set clipboard=unnamedplus
 colorscheme gruvbox
 set background=dark
+let g:airline_theme='bubblegum'
 "***************************************************************************************************
 
 "Keymaps for compiling and plugins******************************************************************
