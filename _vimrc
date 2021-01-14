@@ -16,7 +16,6 @@ set autoindent
 set smartindent
 set cindent
 set pastetoggle=<F3>
-set clipboard=unnamedplus
 set guifont=Fira_Code_Medium:h11
 colorscheme gruvbox
 set background=dark
