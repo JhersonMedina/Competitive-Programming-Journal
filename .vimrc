@@ -36,22 +36,28 @@ filetype plugin indent on    " required
 syntax on
 set number
 set noerrorbells
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
 set cindent
+set nowrap
 set pastetoggle=<F3>
-set clipboard=unnamedplus
+set clipboard=unnamed
 colorscheme gruvbox
 set background=dark
 let g:airline_theme='bubblegum'
 "***************************************************************************************************
 
-"Keymaps for compiling and plugins******************************************************************
-nnoremap <F5> :!g++ -o  %:r.out % -std=c++14<Enter>
+"Keymaps for compiling C++
+nnoremap <F5> :w <bar> !g++ -o  %:r.out % -std=c++14<Enter>
 nnoremap <F6> :%y+<Enter>
 nnoremap <F9> :!./%:r.out<Enter>
+"Keymaps for java
+"nnoremap <F5> :w <bar> !javac %:r.java<Enter>
+"Keymaps for
+"plugins********************************************************************************************
 map <F8> :NERDTreeToggle<CR>
 "**************************************************************************************************
-
