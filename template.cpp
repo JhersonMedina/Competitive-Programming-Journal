@@ -1,13 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 /* * * *   * * *   	* * * */
+#define mp make_pair
+#define fst first first
+#define snd second 
+#define pb push_back 
+#define ALL(x) x.begin(), x.end()
+#define SZ(x) x.size()
+#define mst(a, v) memset((a), (v), sizeof (v))
 typedef long long ll;
-typedef long double ld;
 typedef pair<int, int> pii;
 /* * * *   * * *   	* * * */
 /* *
  *
- * I love Ylva Eriksson
+ * Too many mind, no mind.
  *
  * */
 int main(){
@@ -16,4 +22,3 @@ int main(){
 	//freopen("output.txt", "w", stdout);
 	return 0;
 }
-
