@@ -2,12 +2,12 @@
 using namespace std;
 /* * * *   * * *   	* * * */
 #define mp make_pair
-#define fst first first
+#define fst first 
 #define snd second 
 #define pb push_back 
 #define ALL(x) x.begin(), x.end()
 #define SZ(x) x.size()
-#define mst(a, v) memset((a), (v), sizeof (v))
+#define ms(a, v) memset((a), (v), sizeof (a))
 typedef long long ll;
 typedef pair<int, int> pii;
 /* * * *   * * *   	* * * */
