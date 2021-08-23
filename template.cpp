@@ -19,6 +19,7 @@ using namespace std;
 #define sz(x) int((x).size())
 #define compress(x) sort(all(x)); x.rsz(unique(all(x)) - bg(x))
 #define ms(a, v) memset((a), (v), sizeof (a))
+#define deb(x) cout << #x << ": " << x << endl
 #define forn(i,n) for (int i = 0; i < (int)(n); ++i)
 #define ford(i,n) for (int i = (int)(n) - 1; i >= 0; --i)
 #define fore(i, a, b) for (int i = (int)(a); i <= (int)(b); ++i)
