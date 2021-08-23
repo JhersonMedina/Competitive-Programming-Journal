@@ -7,6 +7,7 @@ using namespace std;
 #define pb push_back 
 #define rsz resize
 #define ins insert
+#define ers erase
 #define lb lower_bound
 #define ub upper_bound
 #define ft front()
