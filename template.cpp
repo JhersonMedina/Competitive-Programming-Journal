@@ -7,7 +7,6 @@ using namespace std;
 #define pb push_back 
 #define rsz resize
 #define ins insert
-#define ers erase
 #define lb lower_bound
 #define ub upper_bound
 #define ft front()
@@ -19,6 +18,9 @@ using namespace std;
 #define sz(x) int((x).size())
 #define compress(x) sort(all(x)); x.rsz(unique(all(x)) - bg(x))
 #define ms(a, v) memset((a), (v), sizeof (a))
+#define forn(i,n) for (int i = 0; i < (int)(n); ++i)
+#define ford(i,n) for (int i = (int)(n) - 1; i >= 0; --i)
+#define fore(i, a, b) for (int i = (int)(a); i <= (int)(b); ++i)
 typedef long long ll;
 typedef pair<int, int> pii;
 /* * * *   * * *   	* * * */
