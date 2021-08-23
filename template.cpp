@@ -25,6 +25,11 @@ using namespace std;
 #define fore(i, a, b) for (int i = (int)(a); i <= (int)(b); ++i)
 typedef long long ll;
 typedef pair<int, int> pii;
+typedef vector <int> vi;
+typedef vector <pii> vpi;
+typedef pair<ll, ll> pll;
+typedef vector <ll> vl;
+typedef vector <pll> vpl;
 /* * * *   * * *   	* * * */
 /* *
  *
