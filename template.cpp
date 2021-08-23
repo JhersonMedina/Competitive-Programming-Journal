@@ -21,8 +21,9 @@ using namespace std;
 #define ms(a, v) memset((a), (v), sizeof (a))
 #define deb(x) cout << #x << ": " << x << endl
 #define forn(i,n) for (int i = 0; i < (int)(n); ++i)
-#define ford(i,n) for (int i = (int)(n) - 1; i >= 0; --i)
 #define fore(i, a, b) for (int i = (int)(a); i <= (int)(b); ++i)
+#define rofn(i,n) for (int i = (int)(n) - 1; i >= 0; --i)
+#define rofe(i, a, b) for (int i = (int)(b); i >= a; --i)
 typedef long long ll;
 typedef pair<int, int> pii;
 typedef vector <int> vi;
