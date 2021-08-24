@@ -6,6 +6,7 @@ using namespace std;
 #define snd second 
 #define pb push_back 
 #define rsz resize
+#define agn assign
 #define ins insert
 #define ers erase
 #define lb lower_bound
