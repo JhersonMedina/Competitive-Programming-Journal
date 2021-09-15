@@ -2,17 +2,17 @@
 
 VAR1=1;
 VAR2=1;
-while [ $VAR1 == $VAR2 ] 
+while [[ $VAR1 = $VAR2 ]] 
 do
-	./gen.out > in4
-	VAR1=$(./b.out < in4)
-	VAR2=$(./brute.out < in4)
-	if [ $VAR1 = $VAR2 ] 
+	./gen.exe > in4
+	VAR1=$(./b.exe < in4)
+	VAR2=$(./brute.exe < in4)
+	if [[ $VAR1 = $VAR2 ]] 
 	then 
 		echo "OK"
 	fi
 done
 echo "Wrong solution, test case:"
-echo "Correct: " $VAR2
-echo "Yours: " $VAR1
 cat in4
+echo "Answer: " $VAR2
+echo "Output: " $VAR1
