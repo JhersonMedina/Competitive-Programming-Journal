@@ -1,38 +1,10 @@
-"vundle for plugins*********************************************************************************
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=$HOME/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" All of your Plugins must be added before the following line
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'morhetz/gruvbox'
-Plugin 'vim-airline/vim-airline-themes'
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-"***************************************************************************************************
-
-"Edditor Settings***********************************************************************************
+"Remember to install vim plug
+call plug#begin()
+	Plug 'vim-airline/vim-airline'
+	Plug 'morhetz/gruvbox'
+	Plug 'kien/ctrlp.vim'
+	Plug 'scrooloose/nerdtree'
+call plug#end()
 syntax on
 set number
 set noerrorbells
@@ -44,20 +16,25 @@ set autoindent
 set smartindent
 set cindent
 set nowrap
-set pastetoggle=<F3>
-set clipboard=unnamed
+set clipboard=unnamedplus
+"set nopaste
+"Remember to install vim-gnome or vim-gtk package
+"WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " default location
+if executable(s:clip)
+	augroup WSLYank
+		autocmd!
+		autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+		augroup END
+endif
 colorscheme gruvbox
 set background=dark
-let g:airline_theme='bubblegum'
-"***************************************************************************************************
-
-"Keymaps for compiling C++
-nnoremap <F5> :w <bar> !g++ -o  %:r.out % -std=c++14<Enter>
-nnoremap <F6> :%y+<Enter>
+nnoremap <F1> :!./%:r.out < in <CR>
+nnoremap <F2> :!./%:r.out < in2 <CR>
+nnoremap <F3> :!./%:r.out < in3 <CR>
+nnoremap <F4> :!./%:r.out < in4 <CR>
+nnoremap <F5> :w <bar> !g++ -o  %:r.out % -std=c++17<Enter>
+nnoremap <F6> :%y+<CR>
+map <F7> :NERDTreeToggle<CR>
+nnoremap <F8> :terminal<CR>
 nnoremap <F9> :!./%:r.out<Enter>
-"Keymaps for java
-"nnoremap <F5> :w <bar> !javac %:r.java<Enter>
-"Keymaps for
-"plugins********************************************************************************************
-map <F8> :NERDTreeToggle<CR>
-"**************************************************************************************************
