@@ -18,7 +18,7 @@ using namespace std;
 #define all(x) bg(x), end(x)
 #define rall(x) x.rbegin(), x.rend()
 #define sz(x) int((x).size())
-#define compress(x) sort(all(x)); x.rsz(unique(all(x)) - bg(x))
+#define compress(x) sort(all(x)), x.rsz(unique(all(x)) - bg(x))
 #define ms(a, v) memset((a), (v), sizeof (a))
 #define deb(x) cout << #x << ": " << x << endl
 #define forn(i,n) for (int i = 0; i < (int)(n); ++i)
