@@ -39,7 +39,9 @@ using vi = vector <int>;
 using vpi = vector <pii>;
 using ll = long long;
 using pll = pair<ll, ll>;
+using vl = vector<ll>;
 using ld = long double;
+using vld = vector<ld>;
 
 int main() {
 	ios_base::sync_with_stdio(0), cin.tie(0);
