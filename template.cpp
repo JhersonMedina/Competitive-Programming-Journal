@@ -1,5 +1,4 @@
 // Too many mind, no mind.
-
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
